@@ -213,7 +213,7 @@ int get_wxacode_access_token(const char* appid, const char* appsecret, char** ac
         return -1;/*out of mempry*/
     }
     memset(url, 0, url_len + 1);
-    sprintf_s(url, url_len + 1, "%s%s%s%s", wxacode_domain, appid, secret_param, appsecret);
+    sprintf(url, "%s%s%s%s", wxacode_domain, appid, secret_param, appsecret);
     if (verbose)
     {
         printf("access to url:%s\r\n", url);
@@ -298,7 +298,7 @@ int get_wxacode_unlimited(const char* access_token, const char* parameter, unsig
     {
         return -1;/*out of mempry*/
     }
-    sprintf_s(url, url_len + 1, "%s%s", wxacodedomain, access_token);
+    sprintf(url, "%s%s", wxacodedomain, access_token);
     if (verbose)
     {
         printf("access to url:%s\r\n", url);

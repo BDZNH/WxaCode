@@ -72,8 +72,12 @@ int main()
 }
 ```
 ## 依赖
+
 `handle_https_callback(...)`使用了 [libcurl](https://curl.se/libcurl/)
+
 `get_wxacode_access_token`和`get_wxacode_unlimited` 使用了 [rapidjson](https://github.com/Tencent/rapidjson)
+
+编译时，需要添加 curl 依赖，也即 `-lcurl`
 
 ### 在 Ubuntu 上安装依赖
 对于 Ubuntu ，执行以下命令应该可以安装依赖
